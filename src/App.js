@@ -2,14 +2,11 @@
 import "./styles.css";
 
 export default function App() {
-  const noOfNotes = document.querySelectorAll(".noOfNotes");
   const noteList = [2000, 500, 100, 50, 10, 5, 1];
-  const childbox = document.querySelectorAll(".childContainer");
 
   const nextClickHandler = (e) => {
     const billAmount = document.querySelector("#billAmount");
     const childbox = document.querySelectorAll(".childContainer");
-
     if (billAmount.value === "") {
       alert("Please Enter Bill Amount");
     } else {
@@ -28,13 +25,16 @@ export default function App() {
 
   /* check button product */
   const checkClickHandler = (e) => {
-    clearOldNoteCounter();
+    const noOfNotes = document.querySelectorAll(".noOfNotes");
+
+    const childbox = document.querySelectorAll(".childContainer");
     const billAmount = document.querySelector("#billAmount");
     const givenAmount = document.querySelector("#givenAmount");
-
+    clearOldNoteCounter();
     if (givenAmount.value === "") {
       alert("Please enter cash given");
     } else {
+      console.log(billAmount.value + " " + givenAmount.value);
       if (billAmount.value <= givenAmount.value) {
         let returnAmt = givenAmount.value - billAmount.value;
 
@@ -46,17 +46,19 @@ export default function App() {
             noOfNotes[index].innerText = `${notes}`;
           }
         }
+
+        childbox[1].style.display = "block";
       } else {
         alert("bill amount should be less then given amount");
       }
-
-      childbox[1].style.display = "block";
     }
   };
 
   function clearOldNoteCounter() {
-    for (let notes of noOfNotes) {
-      notes.innerText = "";
+    const noOfNotes = document.querySelectorAll(".noOfNotes");
+
+    for (let index = 0; index < noteList.length; index++) {
+      noOfNotes[index].innerText = "";
     }
   }
 
