@@ -1,2 +1,2 @@
-# Suggestbooks
-Created with CodeSandbox
+# Cash Register Manager
+1. app developed in react js 
