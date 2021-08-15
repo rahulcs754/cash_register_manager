@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  --main-light1: #7c83fd;
+  --main-light2: #96baff;
+  --main-light3: #7dedff;
+  --main-light4: #88fff7;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  padding: 2px 10px;
+  background-color: var(--main-light2);
+  width: 80vw;
+  height: auto;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.container label {
+  font-size: 1.5rem;
+}
+
+input {
+  margin: 0px 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 30px;
+  width: 24%;
+}
+
+button {
+  padding: 6px 29px;
+  display: block;
+  margin: 0px auto;
+  background-color: var(--main-light1);
+  font-size: 1em;
+}
+
+.childContainer {
+  display: none;
+}
+
+table {
+  margin: 0px auto;
+}
+
+tr,
+td {
+  border: 1px solid black;
+  padding: 2px 2px;
+  width: 3%;
+}
